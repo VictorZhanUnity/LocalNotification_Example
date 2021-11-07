@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
         AndroidNotificationManager.CancelAllNotifications();
-        AndroidNotificationManager.CreateNewNotification(id, "Notification Title", "Notification Context", "icon_large",
+        int notification_ID = AndroidNotificationManager.CreateNewNotification(id, "Notification Title", "Notification Context", "icon_large",
             DateTime.Now.AddSeconds(seconds), new TimeSpan(0, 1, 0));
     }
 
